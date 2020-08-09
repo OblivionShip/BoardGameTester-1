@@ -1,0 +1,31 @@
+package games.board;
+import games.board.*;
+import games.boards.*;
+
+public class BoardGameTester {
+	private static int[][] tttgameboard = new int[3][3];
+	private static int[][] cfgameboard = new int[6][7];
+	private static int[][] mmgameboard = new int[5][8];
+	
+	public static void main(String[] args) {
+        // 3x3 board for Tic Tac Toe
+        Board tttgameboard = new Board (3,3);
+        // 6x7 board for Connect Four
+        Board cfgameboard = new Board (6,7);
+        // 5x8 board for Mastermind; blue mark
+        Board mmgameboard = new Board (5,8);
+        
+        System.out.println ("Tic Tac Toe");
+        tttgameboard.setCell(Mark.NOUGHT,0,0);
+        System.out.println(tttgameboard.toString());
+  
+        System.out.println("Connect Four");
+        cfgameboard.setCell(Mark.YELLOW,4,3);
+        System.out.println(cfgameboard.toString());
+  
+        System.out.println ("Mastermind");
+        mmgameboard.setCell(Mark.ORANGE,3,6);
+        System.out.println(mmgameboard.toString());
+
+        }
+	} 
